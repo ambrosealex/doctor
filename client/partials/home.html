@@ -1,0 +1,22 @@
+<div ng-controller = "homeController">
+    <a href="#!/">Logout</a>
+    <h1>Doctor's Appointments</h1>
+    Search<input type="text" ng-model="search.name" placeholder="by Name" value=""> <input type="text" ng-model="search.complaint" placeholder="by Complaint" value="">
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Patient Name</th>
+            <th>Complain</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat = "appointment in appointments | filter: {_user:search.name, complaint:search.complaint} | orderBy : appointment.date:true">
+            <td>{{ appointment.date | date: 'MMM dd, yyyy' }}</td>
+            <td>{{ appointment.time | date: 'hh:mm'}} {{ appointment.period }}</td>
+            <td>{{ appointment._user.name }}</td>
+            <td>{{ appointment.complaint }}</td>
+            <td ng-if="appointment._user._id===user._id"><a href="" ng-click="callDeleteAppointment(appointment)">Cancel</a></td>
+        </tr>
+    </table>
+    <a href="#!/new_appointment">Add New Appointment</a>
+</div>

@@ -1,0 +1,7 @@
+<div ng-controller = "loginController">
+    <form class="" ng-submit="callLoginUser(user)">
+        Your Name: <input type="text" ng-model="user"> <br>
+        <input type="submit" name="loginBtn" value="Login">
+    </form>
+    <h3 ng-repeat = "message in messages">{{message}}</h3>
+</div>

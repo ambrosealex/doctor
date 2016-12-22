@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+#wrapper {
+    width: 970px;
+    margin: 0 auto;
+    height: auto;
+    padding: 5px 10px;
+    border: 2px solid black;
+}
+a {
+    margin-right: 100px;
+}
+input {
+    border: 1px solid black;
+    padding: 2px 5px;
+    margin: 10px 30px;
+}
+h3 {
+    color: maroon;
+}

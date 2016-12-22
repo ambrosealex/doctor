@@ -1,0 +1,11 @@
+<div ng-controller = "createController">
+    <h2>Put the question and options here:</h2>
+    <form class="" ng-submit="callCreateAppointment(newAppointment)">
+        Date: <input type="date" ng-model="newAppointment.date">
+        Time: <input type="time" ng-model="newAppointment.time"> <br>
+        Complaint: <input type="text" ng-model="newAppointment.complaint"> <br>
+        <a href="#!/home"><button type="button" name="cancelBtn">Cancel</button></a>
+        <input type="submit" name="pollBtn" value="Create Appointment">
+    </form>
+    <h3 ng-repeat = "message in messages">{{message}}</h3>
+</div>
